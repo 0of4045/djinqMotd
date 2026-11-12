@@ -1,0 +1,17 @@
+name: djinqMotd
+version: 1.0.0
+main: dev.djinq.djinqmotd.DjinqMotd
+api-version: '1.21'
+description: Lightweight server list MOTD for Paper.
+author: djinq
+website: https://djinq.dev
+
+commands:
+  djinqmotd:
+    description: Reloads the MOTD configuration.
+    usage: /djinqmotd reload
+
+permissions:
+  djinqmotd.reload:
+    description: Allows /djinqmotd reload.
+    default: op

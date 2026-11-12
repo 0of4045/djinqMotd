@@ -1,0 +1,12 @@
+# djinqMotd made by djinq
+
+# motd ~ choose STATIC or RANDOM
+motd:
+  mode: RANDOM
+
+  motd_line:
+    - '1': " <#373737>┃ <#B3E342>Minecraft Vanilla+ <#CACACA>[<#E3B341>26.2<#CACACA>]"
+      '2': " <#373737>┃ <#CACACA>Custom Systems ● Ranks ● Economy"
+
+    - '1': " <#373737>┃ <#B3E342>Minecraft Vanilla+ <#CACACA>[<#E3B341>26.2<#CACACA>]"
+      '2': " <#373737>┃ <#CACACA>Enjoy your epic adventure!"
