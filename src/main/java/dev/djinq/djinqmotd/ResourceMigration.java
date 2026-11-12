@@ -32,7 +32,13 @@ final class ResourceMigration {
         boolean changed = false;
 
         for (String path : defaults.getKeys(true)) {
-            if (defaults.isConfigurationSection(path) || current.contains(path)) {
+            if (defaults.isConfigurationSection(path)) {
+                if (current.contains(path) && !current.isConfigurationSection(path)) {
+                    throw new IllegalStateException(resourceName + ": " + path + " must be a section.");
+                }
+                continue;
+            }
+            if (current.contains(path)) {
                 continue;
             }
             if (resourceName.equals("config.yml") && path.equals("motd.motd_line")) {
