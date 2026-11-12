@@ -34,4 +34,4 @@ In `config.yml`, you can edit:
 
 `messages.yml` contains one `prefix` setting. It is added automatically to command messages.
 
-Built against Paper 1.21.11 with Java 21.
+Built for Paper 1.21.11 through 26.3. Use Java 21 for Paper 1.21.11, or Java 25 for Paper 26.1+.
