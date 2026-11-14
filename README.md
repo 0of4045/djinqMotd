@@ -34,4 +34,6 @@ In `config.yml`, you can edit:
 
 `messages.yml` contains one `prefix` setting. It is added automatically to command messages.
 
+Existing customized settings and messages are preserved. Missing defaults are added on startup, with a backup before changes. Existing MOTD lists are not replaced; an absent list must be configured before loading.
+
 Built for Paper 1.21.11 through 26.3. Use Java 21 for Paper 1.21.11, or Java 25 for Paper 26.1+.

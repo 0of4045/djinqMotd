@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
+
 import net.kyori.adventure.text.Component;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -38,9 +39,11 @@ public record MotdSettings(boolean random, List<Component> messages) {
             if (!(entries.get(index) instanceof Map<?, ?> lines) || lines.size() != 2
                     || !(lines.get("1") instanceof String firstLine)
                     || !(lines.get("2") instanceof String secondLine)) {
-                throw new InvalidConfigurationException(path + "[" + index + "] must contain exactly two strings, '1' and '2'");
+                throw new InvalidConfigurationException(
+                        path + "[" + index + "] must contain exactly two strings, '1' and '2'");
             }
-            prepared.add(TextRenderer.render(firstLine).append(Component.newline()).append(TextRenderer.render(secondLine)));
+            prepared.add(
+                    TextRenderer.render(firstLine).append(Component.newline()).append(TextRenderer.render(secondLine)));
         }
         return new MotdSettings(normalized.equals("RANDOM"), prepared);
     }

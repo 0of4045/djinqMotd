@@ -3,6 +3,6 @@ prefix: '<#B3E342>[<#DFFFAC>Motd<#B3E342>] '
 
 messages:
   no-permission: '<#CACACA>You do not have <#E34242>permission<#CACACA>.'
+  usage: '<#CACACA>Usage: <#E3B341>/djinqmotd reload'
   reload-success: '<#CACACA>Configuration <#B3E342>reloaded<#CACACA>.'
   reload-failed: '<#CACACA>Configuration reload <#E34242>failed<#CACACA>. Check console for details.'
-  usage: '<#CACACA>Usage: <#E3B341>/djinqmotd reload'

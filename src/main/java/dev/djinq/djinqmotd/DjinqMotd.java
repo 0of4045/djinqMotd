@@ -3,6 +3,7 @@ package dev.djinq.djinqmotd;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
+
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.plugin.java.JavaPlugin;

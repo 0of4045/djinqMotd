@@ -2,6 +2,7 @@ package dev.djinq.djinqmotd;
 
 import java.util.List;
 import java.util.Locale;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -31,7 +32,10 @@ public final class MotdCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        return args.length == 1 && sender.hasPermission("djinqmotd.reload")
-                && "reload".startsWith(args[0].toLowerCase(Locale.ROOT)) ? List.of("reload") : List.of();
+        if (args.length == 1 && sender.hasPermission("djinqmotd.reload")
+                && "reload".startsWith(args[0].toLowerCase(Locale.ROOT))) {
+            return List.of("reload");
+        }
+        return List.of();
     }
 }
